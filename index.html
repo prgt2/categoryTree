@@ -4,32 +4,20 @@
         <meta charset="utf-8">
         <title>drzewo kategoryczne</title>
         <link rel="stylesheet" href="stylesheet.css" type="text/css">
-    </head>
-    <body>
         <script async src="https://code.jquery.com/jquery-latest.pack.js"></script>
-        <script async src="script.js"></script>
-        <div>
-            <button onclick="skrypt()">zassisj kurwa JSON</button>
-            <h1 class="place"></h1>
-        </div>
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script> <!-- po dodaniu tej wersji jQuery zaczęła działać jQuerowa metoda click() (na stacku ktoś sprawdzał cudzy kod w jsfiddle i stwierdził, że skoro tam działa, to problem jest w wersji biblioteki jQuery. więc zassałam tę samą wersję, która jest w js fiddle ) -->
+        <script async src="script.js"></script>    </head>  
+    <body>
 
-        <div id="id01">Tu będzie obiekt.</div>
-        <button onclick="skrypt2()">zassisj kurwa JSON2</button>
-        <div id="div01">Albo tu będzie obiekt.</div>
-        <button id="but01">zassij proszę JSON</button>
-<script>
-    $(document).ready(function() {
-      $("#but01").click(function() {
-        $.getJSON('https://www.lionsbet.com/rest/market/categories', dana, function(dana) {
-                //document.querySelector('.place').innerHTML = data;
-                console.log(dana);
-                alert(dana);
-                $("id01").html(dana);
-            });
-            var text = "hshs" ;//+ ${data[5]};
-             
-        });
-    });
-</script>
+        <div>
+            <button onclick="skrypt()">zassisj kurwa JSON</button>  <!-- wcześniej działała tylko HTMLowa metoda onclick -->
+            <h1 class="place">Place</h1>
+        </div>
+        <button id="but02">zassisj kurwa JSON 2</button>
+        <div id="id02">Albo tu będzie obiekt (id02).</div>
+
     </body>
 </html>
