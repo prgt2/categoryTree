@@ -12,5 +12,24 @@
             <button onclick="skrypt()">zassisj kurwa JSON</button>
             <h1 class="place"></h1>
         </div>
+
+        <div id="id01">Tu będzie obiekt.</div>
+        <button onclick="skrypt2()">zassisj kurwa JSON2</button>
+        <div id="div01">Albo tu będzie obiekt.</div>
+        <button id="but01">zassij proszę JSON</button>
+<script>
+    $(document).ready(function() {
+      $("#but01").click(function() {
+        $.getJSON('https://www.lionsbet.com/rest/market/categories', dana, function(dana) {
+                //document.querySelector('.place').innerHTML = data;
+                console.log(dana);
+                alert(dana);
+                $("id01").html(dana);
+            });
+            var text = "hshs" ;//+ ${data[5]};
+             
+        });
+    });
+</script>
     </body>
 </html>
