@@ -1,10 +1,21 @@
 function skrypt() {
+<<<<<<< HEAD
    // $(document).ready(function() {
      //   $("button").click(function() {  //niepotrzebne,  bo w HTML jest  onclick.
             $.getJSON('https://www.lionsbet.com/rest/market/categories',  function(data){
                 document.querySelector('.place').innerHTML = data;
                 console.log(data);
              //  $(".place").html(data);  // tu html() usuwa tekst "Place", ale nie wstawia obiektu. append() wcale nie działa - w skrypt2 działają, czemu?!
+=======
+    //$(document).ready(function() {
+        //$("button").click(function) {
+            $.getJSON('https://www.lionsbet.com/rest/market/categories', function(data) {
+                //var a = JSON.parse(data.data)
+                document.querySelector('.place').innerHTML = data.data[5].categoryName;
+                console.log(a);
+                var text = data ;//+ ${data[5]};
+                $("place").html(data);
+>>>>>>> 89e802927ce412853c814f499d1ab84f834d3728
             });
             var text = "hshs" ;//+ ${data[5]};
     //  })   
