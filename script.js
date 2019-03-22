@@ -17,3 +17,8 @@ function skrypt() {
             
        // };
     //});
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> refs/remotes/origin/master
