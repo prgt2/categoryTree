@@ -9,18 +9,18 @@ function skrypt() {
             sportyLvl1.push(sporty[i]);
         }   
     }
-    /*function compare(a, b) {
-        a.categoryId < b.categoryId ? -1 :  1;
-    }
-    sportyLvl1Sorted = sportyLvl1.sort(compare)
-    console.log(sportyLvl1);
-    console.log(sportyLvl1Sorted);  */
-    
     sportyLvl1Sorted = sportyLvl1.sort(function(a, b) {
             return a.categoryId - b.categoryId;
         });
-        document.getElementById("demo").innerHTML = sportyLvl1Sorted[6].sportName;
-        console.log(sportyLvl1Sorted);
+    //document.getElementById('demo').innerHTML = sportyLvl1Sorted[5].categoryName;
+    console.log(sportyLvl1Sorted[5].categoryName);
+    for (i = 0; i < sportyLvl1.length; i++) {
+        nowyElement = document.createElement('li');
+        nowyElement.innerHTML = sportyLvl1Sorted[i].categoryName;
+        listaSportyLvl1 = document.getElementById('sportyLvl1');
+        listaSportyLvl1.appendChild(nowyElement);
+    }
+    //console.log(sportyLvl1Sorted[5].categoryName);
     });
 };
 
