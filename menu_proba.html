@@ -1,0 +1,86 @@
+<!doctype HTML>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=devive-width, initial-scale=1" >
+   
+  <style type="text/css">
+   /* przyciski do zwijania*/
+  .collapsible{
+    background-color: #869791;
+    color:#444;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  /* zmien kolor  buttonu po najechaniu i kliknieciu*/
+  .active, .Lvl2:hover {
+    background-color:teal;
+  }
+  /*elementy zwijanych divów*/
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+      }
+  /*Całe menu */
+  nav {
+      width: 25%;
+      height: 100%;
+      position: fixed;
+      overflow: auto;
+    }  
+  .Lvl1 {
+    background-color: #032621;
+
+  }
+  .Lvl2 {
+    background-color: #015247;
+  }
+  .Lvl3 {
+    background-color: #042621;
+  }
+  .Lvl1,.Lvl2,.Lvl3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    border: none;
+    padding: none;
+    outline: none;
+    width: 100;
+  }
+  </style>
+
+</head>
+<body>
+
+<nav>
+<button class="Lvl1 collapsible">Sport</button>
+  <div class="content">
+    <button class="Lvl2 collapsible">Team</button>
+      <div class="content">
+        <button class="Lvl3 collapsible"><form><input type="checkbox" name="match" value="match_1">Match no. 1</form></button>
+      </div>
+  </div>
+
+</nav>
+
+<script type="text/javascript" >
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i=0; i < coll.length; i++){
+    coll[i].addEventListener("click", function(){
+      this.classList.toggle("active");
+        var content = this.nextElementSibling;
+          if (content.style.display === "block"){
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+    });
+  }
+</script>
+
+</body>
