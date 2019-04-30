@@ -1,8 +1,8 @@
 {
-  "name": "categorytree",
+  "name": "category_tree",
   "version": "1.0.0",
-  "description": "Task for SB Software",
-  "main": "script.js",
+  "description": "task for SB software",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/purgator2000/categoryTree/issues"
   },
-  "homepage": "https://github.com/purgator2000/categoryTree#readme"
+  "homepage": "https://github.com/purgator2000/categoryTree#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.2"
+  }
 }
